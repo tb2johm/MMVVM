@@ -1,0 +1,15 @@
+﻿<Window x:Class="UsageExample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="106" Width="525"
+        Background="DarkGray">
+    <!-- First of all we must connect the DataContext to the ViewModel (created in app.xaml)-->
+    <StackPanel Margin="4" VerticalAlignment="Center" DataContext="{StaticResource ViewModel}">
+        <DockPanel>
+            <!-- Then we bind the button command to the ClearCommand in the ViewModel -->
+            <Button DockPanel.Dock="Right" Content="Clear text" Command="{Binding ClearCommand}"/>
+            <!-- And finaly binding the text to the TextToClear property, make sure the property is updated on changes to the text -->
+            <TextBox Margin="3,0" Text="{Binding TextToClear, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        </DockPanel>
+    </StackPanel>
+</Window>
