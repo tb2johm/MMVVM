@@ -39,7 +39,7 @@ namespace MyApplication.ViewModel
 * Bind your xaml and control to the ViewModel and the MyText property
 ```XAML
 <Window ...
-         xmln:vm="clr-namespace:MyApplication.ViewModel"
+         xmlns:vm="clr-namespace:MyApplication.ViewModel"
          ...>
   <Window.Resources>
     <vm:ViewModel x:Key="ViewModel">
