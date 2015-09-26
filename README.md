@@ -1,5 +1,5 @@
 # MMVVM
-My ModelView View Model helper framework
+My Model View ViewModel helper framework
 
 This package is directed to new users of MVVM, to make it a little simpler to start with. More senior users will most likley
 already have this functionality implemented.
