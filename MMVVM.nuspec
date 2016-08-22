@@ -11,7 +11,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
     <releaseNotes>Initial release.</releaseNotes>
-    <copyright>Copyright 2015 Markus Johansson</copyright>
+    <copyright>Copyright 2016 Markus Johansson</copyright>
     <tags>MVVM</tags>
   </metadata>
 </package>
