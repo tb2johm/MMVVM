@@ -10,9 +10,9 @@ using System.Windows;
 [assembly: AssemblyTitle("UsageExample")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Volvo Car Corporation")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("UsageExample")]
-[assembly: AssemblyCopyright("Copyright © Volvo Car Corporation 2015")]
+[assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
