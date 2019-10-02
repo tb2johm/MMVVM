@@ -20,6 +20,20 @@ namespace MMVVM.ViewModelBase
             PropertyChanged.Invoke(this, new PropertyChangedEventArgs(property));
         }
 
+        /// <summary>
+        /// Notifies any subscribers when a update has been made
+        /// </summary>
+        /// <param name="property">Updated property name</param>
+        protected void Notify(object property)
+        {
+            if (property is null)
+            {
+                throw new ArgumentNullException(nameof(property));
+            }
+
+            Notify(nameof(property));
+        }
+
         #region Interface stuff
         public event PropertyChangedEventHandler PropertyChanged = delegate { };
         #endregion

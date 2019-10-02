@@ -9,7 +9,7 @@ With properties I mean how to show and update data on the screen.
 Commands determines what happens for example when you press a button.
 
 ## Usage
-####Properties:
+### Properties
 
 * So create a ViewModel in a folder named ViewModel, and make it extend MMVVM.ViewModelBase.ViewModelBase.
 
@@ -31,7 +31,7 @@ namespace MyApplication.ViewModel
         if (value != _myText)
         {
           _myText = value;
-          Notify("MyText");
+          Notify(MyText);
         }
       }
     }
@@ -52,7 +52,7 @@ namespace MyApplication.ViewModel
 ```
 DONE! So every time you change the MyText property, the window will automatically update the data
 
-####Commands:
+### Commands
 * In your ViewModel Create a public RelayCommand property and the wanted Action
 ```C#
   public MMVVM.Commands.RelayCommand ChangeMyText {get; set;}
@@ -88,3 +88,12 @@ DONE! So every time you change the MyText property, the window will automaticall
 Yheay! Now it's done!
 
 For a better example, have a look at the UsageExample in the project
+
+## Packaging
+To packages this project 
+* Make updates to code (if needed)
+* Update versions
+* Create packages:
+```
+\packages\NuGet.CommandLine.5.2.0\tools\nuget.exe pack MMVVM.csproj
+```

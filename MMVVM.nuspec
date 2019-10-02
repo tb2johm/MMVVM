@@ -6,12 +6,12 @@
     <title>$title$</title>
     <authors>$author$</authors>
     <owners>$author$</owners>
-    <licenseUrl>http://github.com/tb2johm/MMVVM/blob/master/LICENSE</licenseUrl>
+    <license type="expression">MIT</license>
     <projectUrl>https://github.com/tb2johm/MMVVM</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
     <releaseNotes>Initial release.</releaseNotes>
-    <copyright>Copyright 2016 Markus Johansson</copyright>
+    <copyright>Copyright 2019 Markus Johansson</copyright>
     <tags>MVVM</tags>
   </metadata>
 </package>

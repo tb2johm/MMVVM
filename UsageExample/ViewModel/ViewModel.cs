@@ -29,7 +29,7 @@ namespace UsageExample.ViewModel
                 {
                     _textToClear = value;
                     // Notify the text change to update the GUI
-                    Notify("TextToClear");
+                    Notify(TextToClear);
                     // Raise the CanExecuteChanged to update the button availibility
                     ClearCommand.RaiseCanExecuteChanged();
                 }
@@ -44,7 +44,7 @@ namespace UsageExample.ViewModel
         #region Commands
 
         //Create the ClearCommand
-        public MMVVM.Commands.RelayCommand ClearCommand { get; set; }
+        public MMVVM.Commands.RelayCommand ClearCommand { get; private set; }
 
         // This is the action that is called when the button is pressed
         private void ClearAction()
@@ -55,7 +55,7 @@ namespace UsageExample.ViewModel
         // This function is what defines if the button is enabled or not
         private bool CanExecuteClearAction()
         {
-            return !String.IsNullOrEmpty(TextToClear);
+            return !string.IsNullOrEmpty(TextToClear);
         }
 
         #endregion
