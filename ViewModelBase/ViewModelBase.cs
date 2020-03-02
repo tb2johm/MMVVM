@@ -15,7 +15,7 @@ namespace MMVVM.ViewModelBase
         /// Notifies any subscribers when a update has been made
         /// </summary>
         /// <param name="property">Updated property name</param>
-        protected void Notify(String property)
+        protected void NotifyString(String property)
         {
             PropertyChanged.Invoke(this, new PropertyChangedEventArgs(property));
         }
