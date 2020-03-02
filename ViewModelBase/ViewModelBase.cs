@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace MMVVM.ViewModelBase
 {
@@ -14,24 +15,15 @@ namespace MMVVM.ViewModelBase
         /// <summary>
         /// Notifies any subscribers when a update has been made
         /// </summary>
-        /// <param name="property">Updated property name</param>
-        protected void NotifyString(String property)
+        /// <param name="propertyName">Updated property name</param>
+        protected void Notify([CallerMemberName] string propertyName = null)
         {
-            PropertyChanged.Invoke(this, new PropertyChangedEventArgs(property));
-        }
-
-        /// <summary>
-        /// Notifies any subscribers when a update has been made
-        /// </summary>
-        /// <param name="property">Updated property name</param>
-        protected void Notify(object property)
-        {
-            if (property is null)
+            if (propertyName is null)
             {
-                throw new ArgumentNullException(nameof(property));
+                throw new ArgumentNullException(nameof(propertyName));
             }
 
-            Notify(nameof(property));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
         #region Interface stuff

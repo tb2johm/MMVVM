@@ -31,7 +31,7 @@ namespace MyApplication.ViewModel
         if (value != _myText)
         {
           _myText = value;
-          Notify(MyText);
+          Notify(); //Alternative to Notify(nameof(MyText))
         }
       }
     }

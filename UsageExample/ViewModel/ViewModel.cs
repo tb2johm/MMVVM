@@ -29,7 +29,7 @@ namespace UsageExample.ViewModel
                 {
                     _textToClear = value;
                     // Notify the text change to update the GUI
-                    Notify(TextToClear);
+                    Notify();
                     // Raise the CanExecuteChanged to update the button availibility
                     ClearCommand.RaiseCanExecuteChanged();
                 }
